@@ -49,12 +49,26 @@ def addContact(contact_list):
     print(f"\nContacto {name} agregado")
 
 def removeContact(contact_list):
-    name = input("\nIngresa un nombre: ").strip()
+    for i, c in enumerate(contact_list):
+        if i == 0:
+            print(f"\n{i}- {c['name']}")
+        else:
+            print(f"{i}- {c['name']}")
+
+    option = input("Seleccione una opción: ").strip()
+
+    for i, c in enumerate(contact_list):
+        if str(i) == option:
+            contact_list.remove(c)
+            print(f"\nContacto {c['name']} eliminado")
+            return
+
+    """name = input("\nIngresa un nombre: ").strip()
     for contact in contact_list:
         if contact["name"] == name:
             contact_list.remove(contact)
             print(f"\nContacto {name} eliminado")
-            return
+            return """
     
     print(f"\nContacto no encontrado")
 
@@ -62,7 +76,7 @@ def searchContact(contact_list):
     name = input("\nIngresa un nombre: ").strip()
     search = []
     for contact in contact_list:
-        if contact["name"].startswith(name): 
+        if contact["name"].lower().startswith(name.lower()): 
             search.append(contact)
 
     if not search:
