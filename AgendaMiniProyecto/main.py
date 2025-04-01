@@ -3,6 +3,7 @@ def main():
     contact_list = [] # Definir lista/array de contactos
     while True:
         print("\nAGENDA DE CONTACTOS")
+        
         print("\n1- Agregar contacto")
         print("2- Busca un contacto")
         print("3- Eliminar contacto")

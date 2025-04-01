@@ -1,8 +1,10 @@
 from functools import reduce
 
 def main():
-    print("\nCALCULADORA")
+   
     while True:
+        print("\nCALCULADORA")
+
         print("\n1- Sumar")
         print("2- Restar")
         print("3- Multiplicar")
@@ -43,7 +45,7 @@ def sumar():
             inputnum = int(input("Ingresa un número: ").strip())
             nums.append(inputnum)
     except:
-        print("\nIngresa un valor numerico")
+        print("\nIngresa un valor numérico")
         return
 
     suma = sum(nums)
@@ -73,7 +75,7 @@ def restar():
             inputnum = int(input("Ingresa un número: ").strip())
             nums.append(inputnum)
     except:
-        print("\nIngresa un valor numerico")
+        print("\nIngresa un valor numérico")
         return
     
     rest = reduce(lambda x, y: x - y, nums)
@@ -105,7 +107,7 @@ def multiplicar():
             inputnum = int(input("Ingresa un número: ").strip())
             nums.append(inputnum)
     except:
-        print("\nIngresa un valor numerico")
+        print("\nIngresa un valor numérico")
         return
     
     mul = reduce(lambda x, y: x * y, nums)
@@ -126,7 +128,7 @@ def dividir():
         numA = int(input("Ingresa un número: ").strip())
         numB = int(input("Ingresa un número: ").strip())
     except:
-        print("\nIngresa un valor numerico")
+        print("\nIngresa un valor numérico")
         return
     
     div = numA / numB
